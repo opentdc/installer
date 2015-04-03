@@ -31,6 +31,7 @@ RUN cd $HOME/opt/opentdc \
   && rm apache-tomee-1.7.1-jaxrs.tar.gz \
   && ls -al $HOME/opt/opentdc
 COPY files/opentdc-services-test.war $HOME/opt/opentdc/apache-tomee-jaxrs-1.7.1/webapps/
+COPY files/opentdc-services.war $HOME/opt/opentdc/apache-tomee-jaxrs-1.7.1/webapps/
 VOLUME ["/root/opt/opentdc/apache-tomee-jaxrs-1.7.1/logs", "/root/opt/opentdc/apache-tomee-jaxrs-1.7.1/temp", "/root/opt/opentdc/apache-tomee-jaxrs-1.7.1/work"]
 COPY ./docker-entrypoint.sh /
 RUN chmod a+x /docker-entrypoint.sh
