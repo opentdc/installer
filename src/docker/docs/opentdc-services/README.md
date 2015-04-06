@@ -14,7 +14,7 @@
     
 ## Run this image
 
-    docker run -d -p 8080:80 -p 8009:8009 -p 8001:8001 --name opentdc-services opentdc-services:latest
+    docker run -d -p 9080:80 -p 9009:8009 -p 9001:8001 --name opentdc-services --link opentdc-opencrx:opentdc-opencrx opentdc-services:latest
     
 ## Stop container
 
