@@ -23,6 +23,7 @@
 FROM opencrx:latest
 MAINTAINER admin@opentdc.org
 ENV PLATFORM jre-1.7
+ENV HOME /root
 COPY files/opencrx-core-CRX.ear /root/opt/opencrx/apache-tomee-webprofile-1.7.1/apps/
 RUN rm -rf $HOME/opt/opencrx/apache-tomee-webprofile-1.7.1/webapps/docs \
  && rm -rf $HOME/opt/opencrx/apache-tomee-webprofile-1.7.1/webapps/host-manager \
