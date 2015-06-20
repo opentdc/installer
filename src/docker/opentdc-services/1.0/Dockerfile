@@ -1,4 +1,4 @@
-FROM dockerfile/java:openjdk-7-jdk
+FROM java:openjdk-7-jdk
 MAINTAINER docker@opentdc.org
 ENV VERSION 1.0.0
 ENV PLATFORM jre-1.7
@@ -8,8 +8,8 @@ ENV HOME /root
 RUN apt-get update && apt-get install -y \
   ant \
   apache2 \
-  libapache2-mod-jk \
-  nullmailer
+  libapache2-mod-jk
+#  nullmailer
 
 # Do not expose port 8080 of Tomcat --> front Tomcat with Apache using AJP
 RUN echo "<VirtualHost *:80>" > /etc/apache2/sites-available/000-default.conf \
